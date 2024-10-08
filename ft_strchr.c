@@ -6,13 +6,13 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 18:42:41 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/07 17:18:51 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/07 23:09:15 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strchr(char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
 	int	i;
 
@@ -20,10 +20,10 @@ char	*ft_strchr(char *str, int c)
 	while (str[i] != '\0')
 	{
 		if (str[i] == (char)c)
-			return (&str[i]);
+			return ((char *) &str[i]);
 		i++;
 	}
 	if (str[i] == (char)c)
-		return (&str[i]);
+		return ((char *) &str[i]);
 	return (NULL);
 }

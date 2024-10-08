@@ -6,15 +6,17 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 23:36:30 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/07 18:24:46 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/07 23:10:36 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, void *src, int n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dst, void *src, size_t n)
 {
 	unsigned char	*src_ptr;
 	unsigned char	*dst_ptr;
-	int				i;
+	unsigned int	i;
 
 	i = 0;
 	src_ptr = (unsigned char *) src;

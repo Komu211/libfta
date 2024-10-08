@@ -6,14 +6,16 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 23:27:59 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/09/16 05:46:36 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/07 23:13:28 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, int n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
-	int				i;
+	unsigned int	i;
 
 	i = 0;
 	ptr = s;

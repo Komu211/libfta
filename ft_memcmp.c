@@ -6,13 +6,24 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:19:52 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/07 17:22:30 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/07 23:10:28 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    
+	unsigned int	i;
+	unsigned char	*s1ptr;
+	unsigned char	*s2ptr;
+
+	i = 0;
+	s1ptr = (unsigned char *)s1;
+	s2ptr = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
+	while ((unsigned char)s1ptr[i] == (unsigned char)s2ptr[i] && i < n - 1)
+		i++;
+	return ((unsigned char)s1ptr[i] - (unsigned char)s2ptr[i]);
 }
