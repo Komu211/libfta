@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:12:47 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/09 11:40:59 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/09 23:07:29 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ static int	get_len_sep(char const *s, char c)
 		i++;
 	return (i);
 }
+
 static int	get_split_num(char const *s, char c)
 {
 	int	i;
@@ -33,7 +34,7 @@ static int	get_split_num(char const *s, char c)
 		if (get_len_sep(&s[i], c) > 0 && s[i] != c)
 		{
 			count++;
-			i += get_len_sep(s, c) - 1;
+			i += get_len_sep(&s[i], c);
 		}
 		else
 			i++;
@@ -41,8 +42,52 @@ static int	get_split_num(char const *s, char c)
 	return (count);
 }
 
+int	get_next_split_pos(char const *s, char c, int n)
+{
+	int	i;
+	int	sep_count;
+
+	i = 0;
+	sep_count = 0;
+	while (s[i] && s[i] == c)
+		i++;
+	while (s[i] && sep_count < n)
+	{
+		if (s[i] == c)
+		{
+			sep_count++;
+			while (s[i] && s[i] == c)
+				i++;
+		}
+		else
+			i++;
+	}
+	return (i);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	// char	**splits;
-	return (NULL);
+	char	**splits;
+	int		i;
+	int		j;
+
+	i = 0;
+	splits = malloc((get_split_num(s, c) + 1) * sizeof(char *));
+	if (!splits)
+		return (NULL);
+	while (i < get_split_num(s, c))
+	{
+		j = get_next_split_pos(s, c, i);
+		splits[i] = malloc((get_len_sep(&s[j], c) + 1) * sizeof(char));
+		if (!splits[i])
+		{
+			while (i-- > 0)
+				free(splits[i]);
+			return (free(splits), NULL);
+		}
+		ft_strlcpy(splits[i], &s[j], get_len_sep(&s[j], c) + 1);
+		i++;
+	}
+	splits[i] = NULL;
+	return (splits);
 }
