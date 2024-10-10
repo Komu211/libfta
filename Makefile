@@ -34,7 +34,8 @@ SRCS = 	ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c
 		
-BONUS_SRCS = ft_lstnew.c
+BONUS_SRCS = ft_lstnew.c \
+				ft_lstadd_front.c
 
 CC = cc
 C_FLAGS = -Wall -Wextra -Werror

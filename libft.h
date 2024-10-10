@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 21:58:39 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/10 17:01:38 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:20:30 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,6 @@ typedef struct s_list
 }					t_list;
 
 t_list				*ft_lstnew(void *content);
+void				ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
