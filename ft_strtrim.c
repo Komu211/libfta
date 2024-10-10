@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:19:44 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/09 11:09:58 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/10 15:19:30 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = ft_strlen(s1);
 	while (contains(s1[i], set))
 		i++;
-	while (contains(s1[len - 1], set) && len >= i)
+	while (len > 0 && contains(s1[len - 1], set) && len >= i)
 		len--;
 	trimmed = (char *)malloc(sizeof(char) * (len - i + 1));
 	if (!trimmed)
