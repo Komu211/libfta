@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 23:19:56 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/09 23:45:34 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/10 09:55:40 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,26 +38,27 @@ char	*ft_itoa(int n)
 {
 	char	*num;
 	int		len;
-	int		symbol;
+	int		neg;
 
-	symbol = 0;
+	neg = 0;
+	len = get_num_len(n);
 	if (n < 0)
 	{
 		if (n == -2147483648)
 			return (ft_strdup("-2147483648"));
 		n = -n;
-		symbol = 1;
+		neg = 1;
 	}
-	len = get_num_len(n);
 	num = malloc((len + 1) * sizeof(char));
 	if (!num)
 		return (NULL);
 	num[len--] = '\0';
 	while (len >= 0)
 	{
-		num[len] = ('0' + (n % 10));
+		num[len--] = ('0' + (n % 10));
 		n /= 10;
-		len--;
 	}
+	if (neg == 1)
+		num[0] = '-';
 	return (num);
 }
