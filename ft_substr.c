@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:55:35 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/08 10:50:03 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/10 14:13:02 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 
 	i = 0;
+	if (ft_strlen(s) - start < len)
+		len = ft_strlen(s) - start;
+	if (start >= ft_strlen(s))
+		len = 0;
 	substr = malloc((len + 1) * sizeof(char));
 	if (substr == NULL)
 		return (NULL);

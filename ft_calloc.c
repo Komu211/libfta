@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 22:57:05 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/09 10:17:47 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/10 13:32:43 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,14 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void			*ptr;
-	unsigned int	i;
-	unsigned char	*byte_ptr;
+	void	*ptr;
 
-	i = 0;
 	ptr = malloc(count * size * sizeof(char));
 	if (!ptr)
 	{
 		errno = ENOMEM;
 		return (NULL);
 	}
-	byte_ptr = (unsigned char *)ptr;
-	while (i < size * count)
-	{
-		byte_ptr[i] = 0;
-		i++;
-	}
+	ft_bzero(ptr, size * count);
 	return (ptr);
 }
