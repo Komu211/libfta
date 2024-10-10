@@ -1,5 +1,5 @@
 NAME = libft.a
-SRCS = ft_atoi.c \
+SRCS = 	ft_atoi.c \
 		ft_bzero.c \
 		ft_calloc.c \
 		ft_isalnum.c \
@@ -32,13 +32,16 @@ SRCS = ft_atoi.c \
 		ft_strtrim.c \
 		ft_substr.c \
 		ft_tolower.c \
-		ft_toupper.c \
+		ft_toupper.c
 		
+BONUS_SRCS = ft_lstnew.c
 
 CC = cc
 C_FLAGS = -Wall -Wextra -Werror
 
 OBJS = $(SRCS:.c=.o)
+
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 
 $(NAME): $(OBJS)
@@ -50,12 +53,15 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 
+bonus: $(NAME) $(OBJS) $(BONUS_OBJS)
+	ar -rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 		rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re

@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 10:48:36 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/10 16:36:54 by kmuhlbau         ###   ########.fr       */
+/*   Created: 2024/10/10 15:41:50 by kmuhlbau          #+#    #+#             */
+/*   Updated: 2024/10/10 15:42:28 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putstr_fd(char *s, int fd)
+int	a(void)
 {
-	write(fd, s, ft_strlen(s));
+	return (0);
 }
