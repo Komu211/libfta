@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 21:58:39 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/09 23:33:48 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/10 10:07:38 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strncmp(const char *s1, const char *s2, size_t len);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
