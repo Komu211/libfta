@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 21:36:27 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/11 16:28:36 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/11 16:32:23 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*tmp;
 	void	*tmp_content;
 
-	if (!lst | !f || !del)
+	if (!lst || !f || !del)
 		return (NULL);
 	tmp_content = (*f)(lst->content);
 	new = ft_lstnew(tmp_content);
