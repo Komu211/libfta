@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:19:52 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/07 23:10:28 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/11 14:00:49 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	*s1ptr;
 	unsigned char	*s2ptr;
 
