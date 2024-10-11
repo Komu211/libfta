@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 18:06:09 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/08 11:07:00 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/11 14:07:50 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	i;
-	unsigned int	dst_len;
+	size_t	i;
+	size_t	dst_len;
 
 	i = 0;
 	dst_len = ft_strlen(dst);

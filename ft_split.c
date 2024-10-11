@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:12:47 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/09 23:07:29 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/11 13:10:32 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int	get_split_num(char const *s, char c)
 	return (count);
 }
 
-int	get_next_split_pos(char const *s, char c, int n)
+static int	get_next_split_pos(char const *s, char c, int n)
 {
 	int	i;
 	int	sep_count;

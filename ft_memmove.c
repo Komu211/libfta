@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 23:47:49 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/09 23:18:58 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/11 14:03:24 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	*src_ptr;
 	unsigned char	*dst_ptr;
 

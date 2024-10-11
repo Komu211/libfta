@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 23:36:30 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/08 11:14:06 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/11 14:01:06 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*src_ptr;
 	unsigned char	*dst_ptr;
-	unsigned int	i;
+	size_t			i;
 
 	if (dst == NULL && src == NULL)
 		return (dst);

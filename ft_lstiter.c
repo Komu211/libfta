@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 21:27:28 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/10 21:29:53 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/11 13:36:25 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*current;
-
-	current = lst;
-	while (current)
+	if (!f)
+		return ;
+	while (lst)
 	{
-		(*f)(current->content);
-		current = current->next;
+		(*f)(lst->content);
+		lst = lst->next;
 	}
 }

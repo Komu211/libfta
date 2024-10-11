@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:55:35 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/10 14:13:02 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/11 14:10:27 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*substr;
-	unsigned int	i;
+	char	*substr;
+	size_t	i;
 
 	i = 0;
 	if (ft_strlen(s) - start < len)

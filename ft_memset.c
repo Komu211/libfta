@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 23:17:19 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/07 23:10:58 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/11 14:03:37 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	*ptr;
 
 	ptr = b;

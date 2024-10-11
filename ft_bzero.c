@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 23:27:59 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/10/07 23:13:28 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/10/11 14:20:15 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
-	unsigned int	i;
+	size_t			i;
 
 	i = 0;
 	ptr = s;

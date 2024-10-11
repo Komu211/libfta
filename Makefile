@@ -61,8 +61,8 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 
-bonus: $(BONUS_OBJS)
-	ar -rc $(NAME) $(BONUS_OBJS)
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar -rc $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
