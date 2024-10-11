@@ -41,7 +41,8 @@ BONUS_SRCS = ft_lstnew.c \
 				ft_lstadd_back.c \
 				ft_lstdelone.c \
 				ft_lstclear.c \
-				ft_lstiter.c
+				ft_lstiter.c \
+				ft_lstmap.c
 
 CC = cc
 C_FLAGS = -Wall -Wextra -Werror
@@ -61,7 +62,7 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 bonus: $(NAME) $(OBJS) $(BONUS_OBJS)
-	ar -rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+	ar -rc $(NAME) $(BONUS_OBJS)
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
